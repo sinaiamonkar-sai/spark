@@ -123,7 +123,7 @@ class DiffFramesBasicSlowMixin:
         psser_other = ps.from_pandas(pser_other)
 
         self.assert_eq(pser.pow(pser_other), psser.pow(psser_other).sort_index())
-        self.assert_eq(pser**pser_other, (psser**psser_other).sort_index())
+        self.assert_eq(pser ** pser_other, (psser ** psser_other).sort_index())
         self.assert_eq(pser.rpow(pser_other), psser.rpow(psser_other).sort_index())
 
     def test_shift(self):

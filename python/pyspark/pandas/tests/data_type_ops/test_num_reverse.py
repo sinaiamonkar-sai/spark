@@ -108,8 +108,8 @@ class ReverseTestsMixin:
             # self.assert_eq(1 ** pser, 1 ** psser)
             # self.assert_eq(0.1 ** pser, 0.1 ** psser)
             self.assertRaises(TypeError, lambda: "x" ** psser)
-            self.assert_eq((True**pser).astype(float), True**psser)
-            self.assert_eq((False**pser).astype(float), False**psser)
+            self.assert_eq((True ** pser).astype(float), True ** psser)
+            self.assert_eq((False ** pser).astype(float), False ** psser)
             self.assertRaises(TypeError, lambda: datetime.date(1994, 1, 1) ** psser)
             self.assertRaises(TypeError, lambda: datetime.datetime(1994, 1, 1) ** psser)
 

@@ -829,8 +829,8 @@ class SparkConnectColumnTests(SparkConnectSQLTestCase):
         )
 
         self.assert_eq(
-            cdf.select(cdf.a ** cdf["b"], cdf.d**2, 2**cdf.c).toPandas(),
-            sdf.select(sdf.a ** sdf["b"], sdf.d**2, 2**sdf.c).toPandas(),
+            cdf.select(cdf.a ** cdf["b"], cdf.d ** 2, 2 ** cdf.c).toPandas(),
+            sdf.select(sdf.a ** sdf["b"], sdf.d ** 2, 2 ** sdf.c).toPandas(),
         )
 
     def test_column_field_ops(self):

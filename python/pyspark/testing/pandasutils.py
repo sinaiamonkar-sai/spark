@@ -353,10 +353,7 @@ class PandasOnSparkTestUtils:
         else:
             # quick-sort values and then stable-sort index
             if isinstance(pobj, pd.Series):
-                return pobj.sort_values(
-                    ascending=True,
-                    na_position="last",
-                ).sort_index(
+                return pobj.sort_values(ascending=True, na_position="last",).sort_index(
                     ascending=True,
                     na_position="last",
                     kind="mergesort",

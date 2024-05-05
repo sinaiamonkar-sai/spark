@@ -110,11 +110,11 @@ class CategoricalOpsTestsMixin:
 
     def test_pow(self):
         self.assertRaises(TypeError, lambda: self.psser ** "x")
-        self.assertRaises(TypeError, lambda: self.psser**1)
+        self.assertRaises(TypeError, lambda: self.psser ** 1)
 
         with option_context("compute.ops_on_diff_frames", True):
             for psser in self.pssers:
-                self.assertRaises(TypeError, lambda: self.psser**psser)
+                self.assertRaises(TypeError, lambda: self.psser ** psser)
 
     def test_radd(self):
         self.assertRaises(TypeError, lambda: "x" + self.psser)
@@ -141,7 +141,7 @@ class CategoricalOpsTestsMixin:
 
     def test_rpow(self):
         self.assertRaises(TypeError, lambda: "x" ** self.psser)
-        self.assertRaises(TypeError, lambda: 1**self.psser)
+        self.assertRaises(TypeError, lambda: 1 ** self.psser)
 
     def test_and(self):
         self.assertRaises(TypeError, lambda: self.psser & True)

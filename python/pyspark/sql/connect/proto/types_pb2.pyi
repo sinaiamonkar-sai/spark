@@ -54,7 +54,6 @@ class DataType(google.protobuf.message.Message):
     """
 
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
     class Boolean(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -71,7 +70,6 @@ class DataType(google.protobuf.message.Message):
                 "type_variation_reference", b"type_variation_reference"
             ],
         ) -> None: ...
-
     class Byte(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -88,7 +86,6 @@ class DataType(google.protobuf.message.Message):
                 "type_variation_reference", b"type_variation_reference"
             ],
         ) -> None: ...
-
     class Short(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -105,7 +102,6 @@ class DataType(google.protobuf.message.Message):
                 "type_variation_reference", b"type_variation_reference"
             ],
         ) -> None: ...
-
     class Integer(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -122,7 +118,6 @@ class DataType(google.protobuf.message.Message):
                 "type_variation_reference", b"type_variation_reference"
             ],
         ) -> None: ...
-
     class Long(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -139,7 +134,6 @@ class DataType(google.protobuf.message.Message):
                 "type_variation_reference", b"type_variation_reference"
             ],
         ) -> None: ...
-
     class Float(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -156,7 +150,6 @@ class DataType(google.protobuf.message.Message):
                 "type_variation_reference", b"type_variation_reference"
             ],
         ) -> None: ...
-
     class Double(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -173,7 +166,6 @@ class DataType(google.protobuf.message.Message):
                 "type_variation_reference", b"type_variation_reference"
             ],
         ) -> None: ...
-
     class String(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -196,7 +188,6 @@ class DataType(google.protobuf.message.Message):
                 b"type_variation_reference",
             ],
         ) -> None: ...
-
     class Binary(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -213,7 +204,6 @@ class DataType(google.protobuf.message.Message):
                 "type_variation_reference", b"type_variation_reference"
             ],
         ) -> None: ...
-
     class NULL(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -230,7 +220,6 @@ class DataType(google.protobuf.message.Message):
                 "type_variation_reference", b"type_variation_reference"
             ],
         ) -> None: ...
-
     class Timestamp(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -247,7 +236,6 @@ class DataType(google.protobuf.message.Message):
                 "type_variation_reference", b"type_variation_reference"
             ],
         ) -> None: ...
-
     class Date(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -264,7 +252,6 @@ class DataType(google.protobuf.message.Message):
                 "type_variation_reference", b"type_variation_reference"
             ],
         ) -> None: ...
-
     class TimestampNTZ(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -281,7 +268,6 @@ class DataType(google.protobuf.message.Message):
                 "type_variation_reference", b"type_variation_reference"
             ],
         ) -> None: ...
-
     class CalendarInterval(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -298,7 +284,6 @@ class DataType(google.protobuf.message.Message):
                 "type_variation_reference", b"type_variation_reference"
             ],
         ) -> None: ...
-
     class YearMonthInterval(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -351,7 +336,6 @@ class DataType(google.protobuf.message.Message):
         def WhichOneof(
             self, oneof_group: typing_extensions.Literal["_start_field", b"_start_field"]
         ) -> typing_extensions.Literal["start_field"] | None: ...
-
     class DayTimeInterval(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -404,7 +388,6 @@ class DataType(google.protobuf.message.Message):
         def WhichOneof(
             self, oneof_group: typing_extensions.Literal["_start_field", b"_start_field"]
         ) -> typing_extensions.Literal["start_field"] | None: ...
-
     class Char(google.protobuf.message.Message):
         """Start compound types."""
 
@@ -426,7 +409,6 @@ class DataType(google.protobuf.message.Message):
                 "length", b"length", "type_variation_reference", b"type_variation_reference"
             ],
         ) -> None: ...
-
     class VarChar(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -446,7 +428,6 @@ class DataType(google.protobuf.message.Message):
                 "length", b"length", "type_variation_reference", b"type_variation_reference"
             ],
         ) -> None: ...
-
     class Decimal(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -499,7 +480,6 @@ class DataType(google.protobuf.message.Message):
         def WhichOneof(
             self, oneof_group: typing_extensions.Literal["_scale", b"_scale"]
         ) -> typing_extensions.Literal["scale"] | None: ...
-
     class StructField(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -544,7 +524,6 @@ class DataType(google.protobuf.message.Message):
         def WhichOneof(
             self, oneof_group: typing_extensions.Literal["_metadata", b"_metadata"]
         ) -> typing_extensions.Literal["metadata"] | None: ...
-
     class Struct(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -569,7 +548,6 @@ class DataType(google.protobuf.message.Message):
                 "fields", b"fields", "type_variation_reference", b"type_variation_reference"
             ],
         ) -> None: ...
-
     class Array(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -601,7 +579,6 @@ class DataType(google.protobuf.message.Message):
                 b"type_variation_reference",
             ],
         ) -> None: ...
-
     class Map(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -642,7 +619,6 @@ class DataType(google.protobuf.message.Message):
                 b"value_type",
             ],
         ) -> None: ...
-
     class Variant(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -659,7 +635,6 @@ class DataType(google.protobuf.message.Message):
                 "type_variation_reference", b"type_variation_reference"
             ],
         ) -> None: ...
-
     class UDT(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -738,7 +713,6 @@ class DataType(google.protobuf.message.Message):
                 "_serialized_python_class", b"_serialized_python_class"
             ],
         ) -> typing_extensions.Literal["serialized_python_class"] | None: ...
-
     class Unparsed(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -753,7 +727,6 @@ class DataType(google.protobuf.message.Message):
         def ClearField(
             self, field_name: typing_extensions.Literal["data_type_string", b"data_type_string"]
         ) -> None: ...
-
     NULL_FIELD_NUMBER: builtins.int
     BINARY_FIELD_NUMBER: builtins.int
     BOOLEAN_FIELD_NUMBER: builtins.int

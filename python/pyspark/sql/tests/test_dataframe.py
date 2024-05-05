@@ -359,7 +359,7 @@ class DataFrameTestsMixin:
     def test_coalesce_hints_with_string_parameter(self):
         with self.sql_conf({"spark.sql.adaptive.coalescePartitions.enabled": False}):
             df = self.spark.createDataFrame(
-                zip(["A", "B"] * 2**9, range(2**10)),
+                zip(["A", "B"] * 2 ** 9, range(2 ** 10)),
                 StructType([StructField("a", StringType()), StructField("n", IntegerType())]),
             )
             with io.StringIO() as buf, redirect_stdout(buf):

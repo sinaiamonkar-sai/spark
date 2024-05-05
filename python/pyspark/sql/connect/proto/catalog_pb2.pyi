@@ -321,7 +321,6 @@ class CurrentDatabase(google.protobuf.message.Message):
     """See `spark.catalog.currentDatabase`"""
 
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
     def __init__(
         self,
     ) -> None: ...
@@ -676,7 +675,6 @@ class CreateExternalTable(google.protobuf.message.Message):
     """See `spark.catalog.createExternalTable`"""
 
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
     class OptionsEntry(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -693,7 +691,6 @@ class CreateExternalTable(google.protobuf.message.Message):
         def ClearField(
             self, field_name: typing_extensions.Literal["key", b"key", "value", b"value"]
         ) -> None: ...
-
     TABLE_NAME_FIELD_NUMBER: builtins.int
     PATH_FIELD_NUMBER: builtins.int
     SOURCE_FIELD_NUMBER: builtins.int
@@ -779,7 +776,6 @@ class CreateTable(google.protobuf.message.Message):
     """See `spark.catalog.createTable`"""
 
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
     class OptionsEntry(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -796,7 +792,6 @@ class CreateTable(google.protobuf.message.Message):
         def ClearField(
             self, field_name: typing_extensions.Literal["key", b"key", "value", b"value"]
         ) -> None: ...
-
     TABLE_NAME_FIELD_NUMBER: builtins.int
     PATH_FIELD_NUMBER: builtins.int
     SOURCE_FIELD_NUMBER: builtins.int
@@ -1034,7 +1029,6 @@ class ClearCache(google.protobuf.message.Message):
     """See `spark.catalog.clearCache`"""
 
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
     def __init__(
         self,
     ) -> None: ...
@@ -1081,7 +1075,6 @@ class CurrentCatalog(google.protobuf.message.Message):
     """See `spark.catalog.currentCatalog`"""
 
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
     def __init__(
         self,
     ) -> None: ...

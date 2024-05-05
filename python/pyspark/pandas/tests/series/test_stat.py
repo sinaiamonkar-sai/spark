@@ -588,9 +588,9 @@ class SeriesStatMixin:
         psser = ps.from_pandas(pser)
 
         self.assert_eq(pser.pow(np.nan), psser.pow(np.nan))
-        self.assert_eq(pser**np.nan, psser**np.nan)
+        self.assert_eq(pser ** np.nan, psser ** np.nan)
         self.assert_eq(pser.rpow(np.nan), psser.rpow(np.nan))
-        self.assert_eq(1**pser, 1**psser)
+        self.assert_eq(1 ** pser, 1 ** psser)
 
     def test_autocorr(self):
         pdf = pd.DataFrame({"s1": [0.90010907, 0.13484424, 0.62036035]})

@@ -194,12 +194,12 @@ class SeriesTestsMixin:
             psser.rename(["0", "1"])
 
         # Function index
-        self.assert_eq(psser.rename(lambda x: x**2), pser.rename(lambda x: x**2))
-        self.assert_eq((psser + 1).rename(lambda x: x**2), (pser + 1).rename(lambda x: x**2))
+        self.assert_eq(psser.rename(lambda x: x ** 2), pser.rename(lambda x: x ** 2))
+        self.assert_eq((psser + 1).rename(lambda x: x ** 2), (pser + 1).rename(lambda x: x ** 2))
 
         expected_error_message = "inplace True is not supported yet for a function 'index'"
         with self.assertRaisesRegex(ValueError, expected_error_message):
-            psser.rename(lambda x: x**2, inplace=True)
+            psser.rename(lambda x: x ** 2, inplace=True)
 
         unsupported_index_inputs = (pd.Series([2, 3, 4, 5, 6, 7, 8]), {0: "zero", 1: "one"})
         for index in unsupported_index_inputs:

@@ -187,7 +187,7 @@ class DiffFramesErrorMixin:
         with self.assertRaisesRegex(ValueError, "Cannot combine the series or dataframe"):
             psser.pow(psser_other)
         with self.assertRaisesRegex(ValueError, "Cannot combine the series or dataframe"):
-            psser**psser_other
+            psser ** psser_other
         with self.assertRaisesRegex(ValueError, "Cannot combine the series or dataframe"):
             psser.rpow(psser_other)
 

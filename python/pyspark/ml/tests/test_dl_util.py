@@ -30,7 +30,7 @@ class TestFunctionPickler(unittest.TestCase):
     # Function that will be used to test pickling.
     @staticmethod
     def _test_function(x: float, y: float) -> float:
-        return x**2 + y**2
+        return x ** 2 + y ** 2
 
     def _check_if_test_function_pickled(
         self,

@@ -38,12 +38,12 @@ class NumPowTestsMixin:
         for col in self.numeric_df_cols:
             pser, psser = pdf[col], psdf[col]
             if col in ["float", "float_w_nan"]:
-                self.assert_eq(pser**pser, psser**psser)
+                self.assert_eq(pser ** pser, psser ** psser)
                 self.assert_eq(pser ** pser.astype(bool), psser ** psser.astype(bool))
-                self.assert_eq(pser**True, psser**True)
-                self.assert_eq(pser**False, psser**False)
-                self.assert_eq(pser**1, psser**1)
-                self.assert_eq(pser**0, psser**0)
+                self.assert_eq(pser ** True, psser ** True)
+                self.assert_eq(pser ** False, psser ** False)
+                self.assert_eq(pser ** 1, psser ** 1)
+                self.assert_eq(pser ** 0, psser ** 0)
 
             for n_col in self.non_numeric_df_cols:
                 if n_col == "bool":

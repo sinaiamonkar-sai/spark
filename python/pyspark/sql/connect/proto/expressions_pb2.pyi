@@ -57,21 +57,17 @@ class Expression(google.protobuf.message.Message):
     """
 
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
     class Window(google.protobuf.message.Message):
         """Expression for the OVER clause or WINDOW clause."""
 
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
         class WindowFrame(google.protobuf.message.Message):
             """The window frame"""
 
             DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
             class _FrameType:
                 ValueType = typing.NewType("ValueType", builtins.int)
                 V: typing_extensions.TypeAlias = ValueType
-
             class _FrameTypeEnumTypeWrapper(
                 google.protobuf.internal.enum_type_wrapper._EnumTypeWrapper[
                     Expression.Window.WindowFrame._FrameType.ValueType
@@ -86,7 +82,6 @@ class Expression(google.protobuf.message.Message):
                 """RangeFrame treats rows in a partition as groups of peers.
                 All rows having the same 'ORDER BY' ordering are considered as peers.
                 """
-
             class FrameType(_FrameType, metaclass=_FrameTypeEnumTypeWrapper): ...
             FRAME_TYPE_UNDEFINED: Expression.Window.WindowFrame.FrameType.ValueType  # 0
             FRAME_TYPE_ROW: Expression.Window.WindowFrame.FrameType.ValueType  # 1
@@ -95,7 +90,6 @@ class Expression(google.protobuf.message.Message):
             """RangeFrame treats rows in a partition as groups of peers.
             All rows having the same 'ORDER BY' ordering are considered as peers.
             """
-
             class FrameBoundary(google.protobuf.message.Message):
                 DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -148,7 +142,6 @@ class Expression(google.protobuf.message.Message):
                 def WhichOneof(
                     self, oneof_group: typing_extensions.Literal["boundary", b"boundary"]
                 ) -> typing_extensions.Literal["current_row", "unbounded", "value"] | None: ...
-
             FRAME_TYPE_FIELD_NUMBER: builtins.int
             LOWER_FIELD_NUMBER: builtins.int
             UPPER_FIELD_NUMBER: builtins.int
@@ -176,7 +169,6 @@ class Expression(google.protobuf.message.Message):
                     "frame_type", b"frame_type", "lower", b"lower", "upper", b"upper"
                 ],
             ) -> None: ...
-
         WINDOW_FUNCTION_FIELD_NUMBER: builtins.int
         PARTITION_SPEC_FIELD_NUMBER: builtins.int
         ORDER_SPEC_FIELD_NUMBER: builtins.int
@@ -231,18 +223,15 @@ class Expression(google.protobuf.message.Message):
                 b"window_function",
             ],
         ) -> None: ...
-
     class SortOrder(google.protobuf.message.Message):
         """SortOrder is used to specify the  data ordering, it is normally used in Sort and Window.
         It is an unevaluable expression and cannot be evaluated, so can not be used in Projection.
         """
 
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
         class _SortDirection:
             ValueType = typing.NewType("ValueType", builtins.int)
             V: typing_extensions.TypeAlias = ValueType
-
         class _SortDirectionEnumTypeWrapper(
             google.protobuf.internal.enum_type_wrapper._EnumTypeWrapper[
                 Expression.SortOrder._SortDirection.ValueType
@@ -253,16 +242,13 @@ class Expression(google.protobuf.message.Message):
             SORT_DIRECTION_UNSPECIFIED: Expression.SortOrder._SortDirection.ValueType  # 0
             SORT_DIRECTION_ASCENDING: Expression.SortOrder._SortDirection.ValueType  # 1
             SORT_DIRECTION_DESCENDING: Expression.SortOrder._SortDirection.ValueType  # 2
-
         class SortDirection(_SortDirection, metaclass=_SortDirectionEnumTypeWrapper): ...
         SORT_DIRECTION_UNSPECIFIED: Expression.SortOrder.SortDirection.ValueType  # 0
         SORT_DIRECTION_ASCENDING: Expression.SortOrder.SortDirection.ValueType  # 1
         SORT_DIRECTION_DESCENDING: Expression.SortOrder.SortDirection.ValueType  # 2
-
         class _NullOrdering:
             ValueType = typing.NewType("ValueType", builtins.int)
             V: typing_extensions.TypeAlias = ValueType
-
         class _NullOrderingEnumTypeWrapper(
             google.protobuf.internal.enum_type_wrapper._EnumTypeWrapper[
                 Expression.SortOrder._NullOrdering.ValueType
@@ -273,7 +259,6 @@ class Expression(google.protobuf.message.Message):
             SORT_NULLS_UNSPECIFIED: Expression.SortOrder._NullOrdering.ValueType  # 0
             SORT_NULLS_FIRST: Expression.SortOrder._NullOrdering.ValueType  # 1
             SORT_NULLS_LAST: Expression.SortOrder._NullOrdering.ValueType  # 2
-
         class NullOrdering(_NullOrdering, metaclass=_NullOrderingEnumTypeWrapper): ...
         SORT_NULLS_UNSPECIFIED: Expression.SortOrder.NullOrdering.ValueType  # 0
         SORT_NULLS_FIRST: Expression.SortOrder.NullOrdering.ValueType  # 1
@@ -305,14 +290,11 @@ class Expression(google.protobuf.message.Message):
                 "child", b"child", "direction", b"direction", "null_ordering", b"null_ordering"
             ],
         ) -> None: ...
-
     class Cast(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
         class _EvalMode:
             ValueType = typing.NewType("ValueType", builtins.int)
             V: typing_extensions.TypeAlias = ValueType
-
         class _EvalModeEnumTypeWrapper(
             google.protobuf.internal.enum_type_wrapper._EnumTypeWrapper[
                 Expression.Cast._EvalMode.ValueType
@@ -324,7 +306,6 @@ class Expression(google.protobuf.message.Message):
             EVAL_MODE_LEGACY: Expression.Cast._EvalMode.ValueType  # 1
             EVAL_MODE_ANSI: Expression.Cast._EvalMode.ValueType  # 2
             EVAL_MODE_TRY: Expression.Cast._EvalMode.ValueType  # 3
-
         class EvalMode(_EvalMode, metaclass=_EvalModeEnumTypeWrapper): ...
         EVAL_MODE_UNSPECIFIED: Expression.Cast.EvalMode.ValueType  # 0
         EVAL_MODE_LEGACY: Expression.Cast.EvalMode.ValueType  # 1
@@ -383,10 +364,8 @@ class Expression(google.protobuf.message.Message):
         def WhichOneof(
             self, oneof_group: typing_extensions.Literal["cast_to_type", b"cast_to_type"]
         ) -> typing_extensions.Literal["type", "type_str"] | None: ...
-
     class Literal(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
         class Decimal(google.protobuf.message.Message):
             DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -444,7 +423,6 @@ class Expression(google.protobuf.message.Message):
             def WhichOneof(
                 self, oneof_group: typing_extensions.Literal["_scale", b"_scale"]
             ) -> typing_extensions.Literal["scale"] | None: ...
-
         class CalendarInterval(google.protobuf.message.Message):
             DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -467,7 +445,6 @@ class Expression(google.protobuf.message.Message):
                     "days", b"days", "microseconds", b"microseconds", "months", b"months"
                 ],
             ) -> None: ...
-
         class Array(google.protobuf.message.Message):
             DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -496,7 +473,6 @@ class Expression(google.protobuf.message.Message):
                     "element_type", b"element_type", "elements", b"elements"
                 ],
             ) -> None: ...
-
         class Map(google.protobuf.message.Message):
             DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -547,7 +523,6 @@ class Expression(google.protobuf.message.Message):
                     b"values",
                 ],
             ) -> None: ...
-
         class Struct(google.protobuf.message.Message):
             DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -576,7 +551,6 @@ class Expression(google.protobuf.message.Message):
                     "elements", b"elements", "struct_type", b"struct_type"
                 ],
             ) -> None: ...
-
         NULL_FIELD_NUMBER: builtins.int
         BINARY_FIELD_NUMBER: builtins.int
         BOOLEAN_FIELD_NUMBER: builtins.int
@@ -771,7 +745,6 @@ class Expression(google.protobuf.message.Message):
             ]
             | None
         ): ...
-
     class UnresolvedAttribute(google.protobuf.message.Message):
         """An unresolved attribute that is not explicitly bound to a specific column, but the column
         is resolved during analysis by name.
@@ -834,7 +807,6 @@ class Expression(google.protobuf.message.Message):
         def WhichOneof(
             self, oneof_group: typing_extensions.Literal["_plan_id", b"_plan_id"]
         ) -> typing_extensions.Literal["plan_id"] | None: ...
-
     class UnresolvedFunction(google.protobuf.message.Message):
         """An unresolved function is not explicitly bound to one explicit function, but the function
         is resolved during analysis following Sparks name resolution rules.
@@ -884,7 +856,6 @@ class Expression(google.protobuf.message.Message):
                 b"is_user_defined_function",
             ],
         ) -> None: ...
-
     class ExpressionString(google.protobuf.message.Message):
         """Expression as string."""
 
@@ -901,7 +872,6 @@ class Expression(google.protobuf.message.Message):
         def ClearField(
             self, field_name: typing_extensions.Literal["expression", b"expression"]
         ) -> None: ...
-
     class UnresolvedStar(google.protobuf.message.Message):
         """UnresolvedStar is used to expand all the fields of a relation or struct."""
 
@@ -957,7 +927,6 @@ class Expression(google.protobuf.message.Message):
         def WhichOneof(
             self, oneof_group: typing_extensions.Literal["_unparsed_target", b"_unparsed_target"]
         ) -> typing_extensions.Literal["unparsed_target"] | None: ...
-
     class UnresolvedRegex(google.protobuf.message.Message):
         """Represents all of the input attributes to a given relational operator, for example in
         "SELECT `(id)?+.+` FROM ...".
@@ -990,7 +959,6 @@ class Expression(google.protobuf.message.Message):
         def WhichOneof(
             self, oneof_group: typing_extensions.Literal["_plan_id", b"_plan_id"]
         ) -> typing_extensions.Literal["plan_id"] | None: ...
-
     class UnresolvedExtractValue(google.protobuf.message.Message):
         """Extracts a value or values from an Expression"""
 
@@ -1022,7 +990,6 @@ class Expression(google.protobuf.message.Message):
             self,
             field_name: typing_extensions.Literal["child", b"child", "extraction", b"extraction"],
         ) -> None: ...
-
     class UpdateFields(google.protobuf.message.Message):
         """Add, replace or drop a field of `StructType` expression by name."""
 
@@ -1066,7 +1033,6 @@ class Expression(google.protobuf.message.Message):
                 b"value_expression",
             ],
         ) -> None: ...
-
     class Alias(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -1108,7 +1074,6 @@ class Expression(google.protobuf.message.Message):
         def WhichOneof(
             self, oneof_group: typing_extensions.Literal["_metadata", b"_metadata"]
         ) -> typing_extensions.Literal["metadata"] | None: ...
-
     class LambdaFunction(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -1144,7 +1109,6 @@ class Expression(google.protobuf.message.Message):
                 "arguments", b"arguments", "function", b"function"
             ],
         ) -> None: ...
-
     class UnresolvedNamedLambdaVariable(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -1162,7 +1126,6 @@ class Expression(google.protobuf.message.Message):
         def ClearField(
             self, field_name: typing_extensions.Literal["name_parts", b"name_parts"]
         ) -> None: ...
-
     LITERAL_FIELD_NUMBER: builtins.int
     UNRESOLVED_ATTRIBUTE_FIELD_NUMBER: builtins.int
     UNRESOLVED_FUNCTION_FIELD_NUMBER: builtins.int

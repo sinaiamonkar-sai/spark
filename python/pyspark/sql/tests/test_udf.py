@@ -51,7 +51,7 @@ from pyspark.testing.utils import assertDataFrameEqual
 
 class BaseUDFTestsMixin(object):
     def test_udf_with_callable(self):
-        data = self.spark.createDataFrame([(i, i**2) for i in range(10)], ["number", "squared"])
+        data = self.spark.createDataFrame([(i, i ** 2) for i in range(10)], ["number", "squared"])
 
         class PlusFour:
             def __call__(self, col):
@@ -64,7 +64,7 @@ class BaseUDFTestsMixin(object):
         self.assertEqual(res.agg({"plus_four": "sum"}).collect()[0][0], 85)
 
     def test_udf_with_partial_function(self):
-        data = self.spark.createDataFrame([(i, i**2) for i in range(10)], ["number", "squared"])
+        data = self.spark.createDataFrame([(i, i ** 2) for i in range(10)], ["number", "squared"])
 
         def some_func(col, param):
             if col is not None:

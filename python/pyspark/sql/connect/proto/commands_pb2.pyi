@@ -265,7 +265,6 @@ class SqlCommand(google.protobuf.message.Message):
     """
 
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
     class ArgsEntry(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -286,7 +285,6 @@ class SqlCommand(google.protobuf.message.Message):
         def ClearField(
             self, field_name: typing_extensions.Literal["key", b"key", "value", b"value"]
         ) -> None: ...
-
     class NamedArgumentsEntry(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -307,7 +305,6 @@ class SqlCommand(google.protobuf.message.Message):
         def ClearField(
             self, field_name: typing_extensions.Literal["key", b"key", "value", b"value"]
         ) -> None: ...
-
     SQL_FIELD_NUMBER: builtins.int
     ARGS_FIELD_NUMBER: builtins.int
     POS_ARGS_FIELD_NUMBER: builtins.int
@@ -442,11 +439,9 @@ class WriteOperation(google.protobuf.message.Message):
     """As writes are not directly handled during analysis and planning, they are modeled as commands."""
 
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
     class _SaveMode:
         ValueType = typing.NewType("ValueType", builtins.int)
         V: typing_extensions.TypeAlias = ValueType
-
     class _SaveModeEnumTypeWrapper(
         google.protobuf.internal.enum_type_wrapper._EnumTypeWrapper[
             WriteOperation._SaveMode.ValueType
@@ -459,14 +454,12 @@ class WriteOperation(google.protobuf.message.Message):
         SAVE_MODE_OVERWRITE: WriteOperation._SaveMode.ValueType  # 2
         SAVE_MODE_ERROR_IF_EXISTS: WriteOperation._SaveMode.ValueType  # 3
         SAVE_MODE_IGNORE: WriteOperation._SaveMode.ValueType  # 4
-
     class SaveMode(_SaveMode, metaclass=_SaveModeEnumTypeWrapper): ...
     SAVE_MODE_UNSPECIFIED: WriteOperation.SaveMode.ValueType  # 0
     SAVE_MODE_APPEND: WriteOperation.SaveMode.ValueType  # 1
     SAVE_MODE_OVERWRITE: WriteOperation.SaveMode.ValueType  # 2
     SAVE_MODE_ERROR_IF_EXISTS: WriteOperation.SaveMode.ValueType  # 3
     SAVE_MODE_IGNORE: WriteOperation.SaveMode.ValueType  # 4
-
     class OptionsEntry(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -483,14 +476,11 @@ class WriteOperation(google.protobuf.message.Message):
         def ClearField(
             self, field_name: typing_extensions.Literal["key", b"key", "value", b"value"]
         ) -> None: ...
-
     class SaveTable(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
         class _TableSaveMethod:
             ValueType = typing.NewType("ValueType", builtins.int)
             V: typing_extensions.TypeAlias = ValueType
-
         class _TableSaveMethodEnumTypeWrapper(
             google.protobuf.internal.enum_type_wrapper._EnumTypeWrapper[
                 WriteOperation.SaveTable._TableSaveMethod.ValueType
@@ -501,7 +491,6 @@ class WriteOperation(google.protobuf.message.Message):
             TABLE_SAVE_METHOD_UNSPECIFIED: WriteOperation.SaveTable._TableSaveMethod.ValueType  # 0
             TABLE_SAVE_METHOD_SAVE_AS_TABLE: WriteOperation.SaveTable._TableSaveMethod.ValueType  # 1
             TABLE_SAVE_METHOD_INSERT_INTO: WriteOperation.SaveTable._TableSaveMethod.ValueType  # 2
-
         class TableSaveMethod(_TableSaveMethod, metaclass=_TableSaveMethodEnumTypeWrapper): ...
         TABLE_SAVE_METHOD_UNSPECIFIED: WriteOperation.SaveTable.TableSaveMethod.ValueType  # 0
         TABLE_SAVE_METHOD_SAVE_AS_TABLE: WriteOperation.SaveTable.TableSaveMethod.ValueType  # 1
@@ -525,7 +514,6 @@ class WriteOperation(google.protobuf.message.Message):
                 "save_method", b"save_method", "table_name", b"table_name"
             ],
         ) -> None: ...
-
     class BucketBy(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -548,7 +536,6 @@ class WriteOperation(google.protobuf.message.Message):
                 "bucket_column_names", b"bucket_column_names", "num_buckets", b"num_buckets"
             ],
         ) -> None: ...
-
     INPUT_FIELD_NUMBER: builtins.int
     SOURCE_FIELD_NUMBER: builtins.int
     PATH_FIELD_NUMBER: builtins.int
@@ -669,11 +656,9 @@ class WriteOperationV2(google.protobuf.message.Message):
     """As writes are not directly handled during analysis and planning, they are modeled as commands."""
 
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
     class _Mode:
         ValueType = typing.NewType("ValueType", builtins.int)
         V: typing_extensions.TypeAlias = ValueType
-
     class _ModeEnumTypeWrapper(
         google.protobuf.internal.enum_type_wrapper._EnumTypeWrapper[
             WriteOperationV2._Mode.ValueType
@@ -688,7 +673,6 @@ class WriteOperationV2(google.protobuf.message.Message):
         MODE_APPEND: WriteOperationV2._Mode.ValueType  # 4
         MODE_REPLACE: WriteOperationV2._Mode.ValueType  # 5
         MODE_CREATE_OR_REPLACE: WriteOperationV2._Mode.ValueType  # 6
-
     class Mode(_Mode, metaclass=_ModeEnumTypeWrapper): ...
     MODE_UNSPECIFIED: WriteOperationV2.Mode.ValueType  # 0
     MODE_CREATE: WriteOperationV2.Mode.ValueType  # 1
@@ -697,7 +681,6 @@ class WriteOperationV2(google.protobuf.message.Message):
     MODE_APPEND: WriteOperationV2.Mode.ValueType  # 4
     MODE_REPLACE: WriteOperationV2.Mode.ValueType  # 5
     MODE_CREATE_OR_REPLACE: WriteOperationV2.Mode.ValueType  # 6
-
     class OptionsEntry(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -714,7 +697,6 @@ class WriteOperationV2(google.protobuf.message.Message):
         def ClearField(
             self, field_name: typing_extensions.Literal["key", b"key", "value", b"value"]
         ) -> None: ...
-
     class TablePropertiesEntry(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -731,7 +713,6 @@ class WriteOperationV2(google.protobuf.message.Message):
         def ClearField(
             self, field_name: typing_extensions.Literal["key", b"key", "value", b"value"]
         ) -> None: ...
-
     INPUT_FIELD_NUMBER: builtins.int
     TABLE_NAME_FIELD_NUMBER: builtins.int
     PROVIDER_FIELD_NUMBER: builtins.int
@@ -843,7 +824,6 @@ class WriteStreamOperationStart(google.protobuf.message.Message):
     """
 
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
     class OptionsEntry(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -860,7 +840,6 @@ class WriteStreamOperationStart(google.protobuf.message.Message):
         def ClearField(
             self, field_name: typing_extensions.Literal["key", b"key", "value", b"value"]
         ) -> None: ...
-
     INPUT_FIELD_NUMBER: builtins.int
     FORMAT_FIELD_NUMBER: builtins.int
     OPTIONS_FIELD_NUMBER: builtins.int
@@ -1132,7 +1111,6 @@ class StreamingQueryCommand(google.protobuf.message.Message):
     """Commands for a streaming query."""
 
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
     class ExplainCommand(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -1149,7 +1127,6 @@ class StreamingQueryCommand(google.protobuf.message.Message):
         def ClearField(
             self, field_name: typing_extensions.Literal["extended", b"extended"]
         ) -> None: ...
-
     class AwaitTerminationCommand(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -1175,7 +1152,6 @@ class StreamingQueryCommand(google.protobuf.message.Message):
         def WhichOneof(
             self, oneof_group: typing_extensions.Literal["_timeout_ms", b"_timeout_ms"]
         ) -> typing_extensions.Literal["timeout_ms"] | None: ...
-
     QUERY_ID_FIELD_NUMBER: builtins.int
     STATUS_FIELD_NUMBER: builtins.int
     LAST_PROGRESS_FIELD_NUMBER: builtins.int
@@ -1291,7 +1267,6 @@ class StreamingQueryCommandResult(google.protobuf.message.Message):
     """Response for commands on a streaming query."""
 
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
     class StatusResult(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -1325,7 +1300,6 @@ class StreamingQueryCommandResult(google.protobuf.message.Message):
                 b"status_message",
             ],
         ) -> None: ...
-
     class RecentProgressResult(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -1344,7 +1318,6 @@ class StreamingQueryCommandResult(google.protobuf.message.Message):
             self,
             field_name: typing_extensions.Literal["recent_progress_json", b"recent_progress_json"],
         ) -> None: ...
-
     class ExplainResult(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -1359,7 +1332,6 @@ class StreamingQueryCommandResult(google.protobuf.message.Message):
         def ClearField(
             self, field_name: typing_extensions.Literal["result", b"result"]
         ) -> None: ...
-
     class ExceptionResult(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -1428,7 +1400,6 @@ class StreamingQueryCommandResult(google.protobuf.message.Message):
         def WhichOneof(
             self, oneof_group: typing_extensions.Literal["_stack_trace", b"_stack_trace"]
         ) -> typing_extensions.Literal["stack_trace"] | None: ...
-
     class AwaitTerminationResult(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -1442,7 +1413,6 @@ class StreamingQueryCommandResult(google.protobuf.message.Message):
         def ClearField(
             self, field_name: typing_extensions.Literal["terminated", b"terminated"]
         ) -> None: ...
-
     QUERY_ID_FIELD_NUMBER: builtins.int
     STATUS_FIELD_NUMBER: builtins.int
     RECENT_PROGRESS_FIELD_NUMBER: builtins.int
@@ -1525,7 +1495,6 @@ class StreamingQueryManagerCommand(google.protobuf.message.Message):
     """Commands for the streaming query manager."""
 
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
     class AwaitAnyTerminationCommand(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -1552,7 +1521,6 @@ class StreamingQueryManagerCommand(google.protobuf.message.Message):
         def WhichOneof(
             self, oneof_group: typing_extensions.Literal["_timeout_ms", b"_timeout_ms"]
         ) -> typing_extensions.Literal["timeout_ms"] | None: ...
-
     class StreamingQueryListenerCommand(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -1601,7 +1569,6 @@ class StreamingQueryManagerCommand(google.protobuf.message.Message):
                 "_python_listener_payload", b"_python_listener_payload"
             ],
         ) -> typing_extensions.Literal["python_listener_payload"] | None: ...
-
     ACTIVE_FIELD_NUMBER: builtins.int
     GET_QUERY_FIELD_NUMBER: builtins.int
     AWAIT_ANY_TERMINATION_FIELD_NUMBER: builtins.int
@@ -1707,7 +1674,6 @@ class StreamingQueryManagerCommandResult(google.protobuf.message.Message):
     """Response for commands on the streaming query manager."""
 
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
     class ActiveResult(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -1729,7 +1695,6 @@ class StreamingQueryManagerCommandResult(google.protobuf.message.Message):
         def ClearField(
             self, field_name: typing_extensions.Literal["active_queries", b"active_queries"]
         ) -> None: ...
-
     class StreamingQueryInstance(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -1757,7 +1722,6 @@ class StreamingQueryManagerCommandResult(google.protobuf.message.Message):
         def WhichOneof(
             self, oneof_group: typing_extensions.Literal["_name", b"_name"]
         ) -> typing_extensions.Literal["name"] | None: ...
-
     class AwaitAnyTerminationResult(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -1771,7 +1735,6 @@ class StreamingQueryManagerCommandResult(google.protobuf.message.Message):
         def ClearField(
             self, field_name: typing_extensions.Literal["terminated", b"terminated"]
         ) -> None: ...
-
     class StreamingQueryListenerInstance(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -1785,7 +1748,6 @@ class StreamingQueryManagerCommandResult(google.protobuf.message.Message):
         def ClearField(
             self, field_name: typing_extensions.Literal["listener_payload", b"listener_payload"]
         ) -> None: ...
-
     class ListStreamingQueryListenerResult(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -1803,7 +1765,6 @@ class StreamingQueryManagerCommandResult(google.protobuf.message.Message):
         def ClearField(
             self, field_name: typing_extensions.Literal["listener_ids", b"listener_ids"]
         ) -> None: ...
-
     ACTIVE_FIELD_NUMBER: builtins.int
     QUERY_FIELD_NUMBER: builtins.int
     AWAIT_ANY_TERMINATION_FIELD_NUMBER: builtins.int
@@ -2026,7 +1987,6 @@ class GetResourcesCommand(google.protobuf.message.Message):
     """Command to get the output of 'SparkContext.resources'"""
 
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
     def __init__(
         self,
     ) -> None: ...
@@ -2037,7 +1997,6 @@ class GetResourcesCommandResult(google.protobuf.message.Message):
     """Response for command 'GetResourcesCommand'."""
 
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
     class ResourcesEntry(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -2058,7 +2017,6 @@ class GetResourcesCommandResult(google.protobuf.message.Message):
         def ClearField(
             self, field_name: typing_extensions.Literal["key", b"key", "value", b"value"]
         ) -> None: ...
-
     RESOURCES_FIELD_NUMBER: builtins.int
     @property
     def resources(

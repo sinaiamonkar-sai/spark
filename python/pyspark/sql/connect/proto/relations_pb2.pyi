@@ -600,7 +600,6 @@ class Unknown(google.protobuf.message.Message):
     """Used for testing purposes only."""
 
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
     def __init__(
         self,
     ) -> None: ...
@@ -643,7 +642,6 @@ class SQL(google.protobuf.message.Message):
     """Relation that uses a SQL query to generate the output."""
 
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
     class ArgsEntry(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -664,7 +662,6 @@ class SQL(google.protobuf.message.Message):
         def ClearField(
             self, field_name: typing_extensions.Literal["key", b"key", "value", b"value"]
         ) -> None: ...
-
     class NamedArgumentsEntry(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -685,7 +682,6 @@ class SQL(google.protobuf.message.Message):
         def ClearField(
             self, field_name: typing_extensions.Literal["key", b"key", "value", b"value"]
         ) -> None: ...
-
     QUERY_FIELD_NUMBER: builtins.int
     ARGS_FIELD_NUMBER: builtins.int
     POS_ARGS_FIELD_NUMBER: builtins.int
@@ -809,10 +805,8 @@ class Read(google.protobuf.message.Message):
     """
 
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
     class NamedTable(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
         class OptionsEntry(google.protobuf.message.Message):
             DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -829,7 +823,6 @@ class Read(google.protobuf.message.Message):
             def ClearField(
                 self, field_name: typing_extensions.Literal["key", b"key", "value", b"value"]
             ) -> None: ...
-
         UNPARSED_IDENTIFIER_FIELD_NUMBER: builtins.int
         OPTIONS_FIELD_NUMBER: builtins.int
         unparsed_identifier: builtins.str
@@ -851,10 +844,8 @@ class Read(google.protobuf.message.Message):
                 "options", b"options", "unparsed_identifier", b"unparsed_identifier"
             ],
         ) -> None: ...
-
     class DataSource(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
         class OptionsEntry(google.protobuf.message.Message):
             DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -871,7 +862,6 @@ class Read(google.protobuf.message.Message):
             def ClearField(
                 self, field_name: typing_extensions.Literal["key", b"key", "value", b"value"]
             ) -> None: ...
-
         FORMAT_FIELD_NUMBER: builtins.int
         SCHEMA_FIELD_NUMBER: builtins.int
         OPTIONS_FIELD_NUMBER: builtins.int
@@ -957,7 +947,6 @@ class Read(google.protobuf.message.Message):
         def WhichOneof(
             self, oneof_group: typing_extensions.Literal["_schema", b"_schema"]
         ) -> typing_extensions.Literal["schema"] | None: ...
-
     NAMED_TABLE_FIELD_NUMBER: builtins.int
     DATA_SOURCE_FIELD_NUMBER: builtins.int
     IS_STREAMING_FIELD_NUMBER: builtins.int
@@ -1077,11 +1066,9 @@ class Join(google.protobuf.message.Message):
     """
 
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
     class _JoinType:
         ValueType = typing.NewType("ValueType", builtins.int)
         V: typing_extensions.TypeAlias = ValueType
-
     class _JoinTypeEnumTypeWrapper(
         google.protobuf.internal.enum_type_wrapper._EnumTypeWrapper[Join._JoinType.ValueType],
         builtins.type,
@@ -1095,7 +1082,6 @@ class Join(google.protobuf.message.Message):
         JOIN_TYPE_LEFT_ANTI: Join._JoinType.ValueType  # 5
         JOIN_TYPE_LEFT_SEMI: Join._JoinType.ValueType  # 6
         JOIN_TYPE_CROSS: Join._JoinType.ValueType  # 7
-
     class JoinType(_JoinType, metaclass=_JoinTypeEnumTypeWrapper): ...
     JOIN_TYPE_UNSPECIFIED: Join.JoinType.ValueType  # 0
     JOIN_TYPE_INNER: Join.JoinType.ValueType  # 1
@@ -1105,7 +1091,6 @@ class Join(google.protobuf.message.Message):
     JOIN_TYPE_LEFT_ANTI: Join.JoinType.ValueType  # 5
     JOIN_TYPE_LEFT_SEMI: Join.JoinType.ValueType  # 6
     JOIN_TYPE_CROSS: Join.JoinType.ValueType  # 7
-
     class JoinDataType(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -1127,7 +1112,6 @@ class Join(google.protobuf.message.Message):
                 "is_left_struct", b"is_left_struct", "is_right_struct", b"is_right_struct"
             ],
         ) -> None: ...
-
     LEFT_FIELD_NUMBER: builtins.int
     RIGHT_FIELD_NUMBER: builtins.int
     JOIN_CONDITION_FIELD_NUMBER: builtins.int
@@ -1215,11 +1199,9 @@ class SetOperation(google.protobuf.message.Message):
     """Relation of type [[SetOperation]]"""
 
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
     class _SetOpType:
         ValueType = typing.NewType("ValueType", builtins.int)
         V: typing_extensions.TypeAlias = ValueType
-
     class _SetOpTypeEnumTypeWrapper(
         google.protobuf.internal.enum_type_wrapper._EnumTypeWrapper[
             SetOperation._SetOpType.ValueType
@@ -1231,7 +1213,6 @@ class SetOperation(google.protobuf.message.Message):
         SET_OP_TYPE_INTERSECT: SetOperation._SetOpType.ValueType  # 1
         SET_OP_TYPE_UNION: SetOperation._SetOpType.ValueType  # 2
         SET_OP_TYPE_EXCEPT: SetOperation._SetOpType.ValueType  # 3
-
     class SetOpType(_SetOpType, metaclass=_SetOpTypeEnumTypeWrapper): ...
     SET_OP_TYPE_UNSPECIFIED: SetOperation.SetOpType.ValueType  # 0
     SET_OP_TYPE_INTERSECT: SetOperation.SetOpType.ValueType  # 1
@@ -1425,11 +1406,9 @@ class Aggregate(google.protobuf.message.Message):
     """Relation of type [[Aggregate]]."""
 
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
     class _GroupType:
         ValueType = typing.NewType("ValueType", builtins.int)
         V: typing_extensions.TypeAlias = ValueType
-
     class _GroupTypeEnumTypeWrapper(
         google.protobuf.internal.enum_type_wrapper._EnumTypeWrapper[Aggregate._GroupType.ValueType],
         builtins.type,
@@ -1441,7 +1420,6 @@ class Aggregate(google.protobuf.message.Message):
         GROUP_TYPE_CUBE: Aggregate._GroupType.ValueType  # 3
         GROUP_TYPE_PIVOT: Aggregate._GroupType.ValueType  # 4
         GROUP_TYPE_GROUPING_SETS: Aggregate._GroupType.ValueType  # 5
-
     class GroupType(_GroupType, metaclass=_GroupTypeEnumTypeWrapper): ...
     GROUP_TYPE_UNSPECIFIED: Aggregate.GroupType.ValueType  # 0
     GROUP_TYPE_GROUPBY: Aggregate.GroupType.ValueType  # 1
@@ -1449,7 +1427,6 @@ class Aggregate(google.protobuf.message.Message):
     GROUP_TYPE_CUBE: Aggregate.GroupType.ValueType  # 3
     GROUP_TYPE_PIVOT: Aggregate.GroupType.ValueType  # 4
     GROUP_TYPE_GROUPING_SETS: Aggregate.GroupType.ValueType  # 5
-
     class Pivot(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -1484,7 +1461,6 @@ class Aggregate(google.protobuf.message.Message):
         def ClearField(
             self, field_name: typing_extensions.Literal["col", b"col", "values", b"values"]
         ) -> None: ...
-
     class GroupingSets(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -1507,7 +1483,6 @@ class Aggregate(google.protobuf.message.Message):
         def ClearField(
             self, field_name: typing_extensions.Literal["grouping_set", b"grouping_set"]
         ) -> None: ...
-
     INPUT_FIELD_NUMBER: builtins.int
     GROUP_TYPE_FIELD_NUMBER: builtins.int
     GROUPING_EXPRESSIONS_FIELD_NUMBER: builtins.int
@@ -2499,7 +2474,6 @@ class StatSampleBy(google.protobuf.message.Message):
     """
 
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
     class Fraction(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -2523,7 +2497,6 @@ class StatSampleBy(google.protobuf.message.Message):
             self,
             field_name: typing_extensions.Literal["fraction", b"fraction", "stratum", b"stratum"],
         ) -> None: ...
-
     INPUT_FIELD_NUMBER: builtins.int
     COL_FIELD_NUMBER: builtins.int
     FRACTIONS_FIELD_NUMBER: builtins.int
@@ -2714,7 +2687,6 @@ class NAReplace(google.protobuf.message.Message):
     """
 
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
     class Replacement(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -2750,7 +2722,6 @@ class NAReplace(google.protobuf.message.Message):
                 "new_value", b"new_value", "old_value", b"old_value"
             ],
         ) -> None: ...
-
     INPUT_FIELD_NUMBER: builtins.int
     COLS_FIELD_NUMBER: builtins.int
     REPLACEMENTS_FIELD_NUMBER: builtins.int
@@ -2830,7 +2801,6 @@ class WithColumnsRenamed(google.protobuf.message.Message):
     """Rename columns on the input relation by a map with name to name mapping."""
 
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
     class RenameColumnsMapEntry(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -2847,7 +2817,6 @@ class WithColumnsRenamed(google.protobuf.message.Message):
         def ClearField(
             self, field_name: typing_extensions.Literal["key", b"key", "value", b"value"]
         ) -> None: ...
-
     class Rename(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -2869,7 +2838,6 @@ class WithColumnsRenamed(google.protobuf.message.Message):
                 "col_name", b"col_name", "new_col_name", b"new_col_name"
             ],
         ) -> None: ...
-
     INPUT_FIELD_NUMBER: builtins.int
     RENAME_COLUMNS_MAP_FIELD_NUMBER: builtins.int
     RENAMES_FIELD_NUMBER: builtins.int
@@ -3037,7 +3005,6 @@ class Unpivot(google.protobuf.message.Message):
     """Unpivot a DataFrame from wide format to long format, optionally leaving identifier columns set."""
 
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
     class Values(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -3057,7 +3024,6 @@ class Unpivot(google.protobuf.message.Message):
         def ClearField(
             self, field_name: typing_extensions.Literal["values", b"values"]
         ) -> None: ...
-
     INPUT_FIELD_NUMBER: builtins.int
     IDS_FIELD_NUMBER: builtins.int
     VALUES_FIELD_NUMBER: builtins.int
@@ -3799,11 +3765,9 @@ global___CollectMetrics = CollectMetrics
 
 class Parse(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
     class _ParseFormat:
         ValueType = typing.NewType("ValueType", builtins.int)
         V: typing_extensions.TypeAlias = ValueType
-
     class _ParseFormatEnumTypeWrapper(
         google.protobuf.internal.enum_type_wrapper._EnumTypeWrapper[Parse._ParseFormat.ValueType],
         builtins.type,
@@ -3812,12 +3776,10 @@ class Parse(google.protobuf.message.Message):
         PARSE_FORMAT_UNSPECIFIED: Parse._ParseFormat.ValueType  # 0
         PARSE_FORMAT_CSV: Parse._ParseFormat.ValueType  # 1
         PARSE_FORMAT_JSON: Parse._ParseFormat.ValueType  # 2
-
     class ParseFormat(_ParseFormat, metaclass=_ParseFormatEnumTypeWrapper): ...
     PARSE_FORMAT_UNSPECIFIED: Parse.ParseFormat.ValueType  # 0
     PARSE_FORMAT_CSV: Parse.ParseFormat.ValueType  # 1
     PARSE_FORMAT_JSON: Parse.ParseFormat.ValueType  # 2
-
     class OptionsEntry(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -3834,7 +3796,6 @@ class Parse(google.protobuf.message.Message):
         def ClearField(
             self, field_name: typing_extensions.Literal["key", b"key", "value", b"value"]
         ) -> None: ...
-
     INPUT_FIELD_NUMBER: builtins.int
     FORMAT_FIELD_NUMBER: builtins.int
     SCHEMA_FIELD_NUMBER: builtins.int

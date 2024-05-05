@@ -219,7 +219,6 @@ global___TaskResourceRequest = TaskResourceRequest
 
 class ResourceProfile(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
-
     class ExecutorResourcesEntry(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -240,7 +239,6 @@ class ResourceProfile(google.protobuf.message.Message):
         def ClearField(
             self, field_name: typing_extensions.Literal["key", b"key", "value", b"value"]
         ) -> None: ...
-
     class TaskResourcesEntry(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
 
@@ -261,7 +259,6 @@ class ResourceProfile(google.protobuf.message.Message):
         def ClearField(
             self, field_name: typing_extensions.Literal["key", b"key", "value", b"value"]
         ) -> None: ...
-
     EXECUTOR_RESOURCES_FIELD_NUMBER: builtins.int
     TASK_RESOURCES_FIELD_NUMBER: builtins.int
     @property

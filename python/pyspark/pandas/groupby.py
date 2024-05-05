@@ -325,8 +325,8 @@ class GroupBy(Generic[FrameLike], metaclass=ABCMeta):
                 psdf = psdf.reset_index()
             index_cols = [c for c in psdf.columns if c not in index_cols]
             if relabeling:
-                psdf = psdf[index_cols+order]
-                psdf.columns = [c[0] for c in index_cols]+columns
+                psdf = psdf[index_cols + order]
+                psdf.columns = [c[0] for c in index_cols] + columns
 
         if relabeling and self._as_index:
             psdf = psdf[order]
